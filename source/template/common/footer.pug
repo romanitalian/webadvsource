@@ -1,0 +1,26 @@
+footer.footer
+    .footer__wrapper
+        .footer__wrapper-content
+            .footer__wrapper-content-one
+                | Этот сайт сделан в рамках обучения в Школе онлайн образования Loftschool
+            .footer__wrapper-content-two
+                ul.footer__links
+                    each lnk in footer_links
+                        li
+                            a(href=lnk.href, title=lnk.title) #{lnk.title}
+                ul.socials.socials__footer
+                    each icon in icons
+                        li.socials__item
+                            a(href=icon.href, title=icon.title).socials__link
+                                svg.socials__icon
+                                    use(xlink:href=`assets/img/sprite.svg#${icon.id}`)
+            .footer__wrapper-content-three
+                ul.footer__wrapper-content-contact
+                    li
+                        a(href="skype: #{contacts.skype}") skype: #{contacts.skype}
+                    li #{contacts.email}
+                    li
+                        a(href="tel:// #{contacts.tel}", title=contacts.tel) #{contacts.tel}
+                    li #{contacts.address}
+    .footer__copyright
+        | Roman Roman | Создано с любовью на кухне | 2017

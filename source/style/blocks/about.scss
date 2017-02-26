@@ -1,0 +1,70 @@
+.about {
+  @extend %clearfix;
+  &__content {
+    padding: 0 $block-bottom;
+  }
+  padding-bottom: $block-bottom;
+  position: relative;
+}
+
+.about__col {
+  float: left;
+  width: 50%;
+  //position: relative;
+  &_left {
+    background: $white;
+    .about__triangle {
+      left: 0;
+      fill: $white;
+    }
+
+    @include tablets {
+      float: none;
+      width: 100%;
+      padding: 0 rem(100px);
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+  &_right {
+    background: $beige;
+    .about__triangle {
+      right: 0;
+      fill: $beige;
+    }
+
+    @include tablets {
+      float: none;
+      width: 100%;
+      padding: 0 rem(100px);
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .about__col_left {
+    width: 50%;
+  }
+}
+
+.about__triangle {
+  display: block;
+  width: 100%;
+  height: 110px;
+  position: absolute;
+  bottom: 100%;
+}
+.about__pic {
+  text-align: center;
+}
+.about__pic img {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.about.block-text {
+  margin: 0 17%;
+}

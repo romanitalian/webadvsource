@@ -1,0 +1,42 @@
+include ./sections/_mixins
+- var ttl = "romanitalian"
+-
+    icons = [
+    {id: 'vk', href: 'http://vk.com', title: 'my vk account'},
+    {id: 'in', href: 'https://www.linkedin.com/in/roman-italian-56a420ba', title: 'linkedin roman-italian'},
+    {id: 'github', href: 'https://github.com/romanitalian', title: 'lets go to my github repository :)'}
+    ]
+-
+    footer_links = [
+    {href: "#", title: 'Мои работы'},
+    {href: "#", title: 'Обо мне'},
+    {href: "#", title: 'Блог'},
+    {href: "#", title: 'Аторизация'}
+    ]
+-
+    var skills = [
+    {'type': 'Backend', 'items': [
+        {'title' : 'PHP', 'value': 50},
+        {'title' : 'MySQL', 'value': 50},
+        {'title' : 'pgSQL', 'value': 50},
+        {'title' : 'pgSQL', 'value': 50},
+        {'title' : 'Node.js', 'value': 50}
+    ]},
+    {'type': 'Frontend', 'items': [
+        {'title' : 'HTML5', 'value': 50},
+        {'title' : 'CSS3', 'value': 50},
+        {'title' : 'JavaScript', 'value': 50},
+        {'title' : 'jQuery', 'value': 50}
+    ]},
+    {'type': 'WorkFlow', 'items': [
+        {'title' : 'Git', 'value': 50},
+        {'title' : 'Gulp', 'value': 50},
+        {'title' : 'Bower', 'value': 50},
+        {'title' : 'Composer', 'value': 50},
+        {'title' : 'Vagrant', 'value': 50}
+    ]}
+    ]
+- contacts = {skype: "romanitalian", phone: "7-000-000-0000", email: "romanitalian.net@gmail.com", address: "Новосибирск, ул. Инская, д. 14"}
+
+include ./common/header
+block content

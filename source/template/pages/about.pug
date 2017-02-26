@@ -1,0 +1,79 @@
+extends ../layout
+
+block title
+    title #{ttl} | about me
+
+block content
+    section.section.about
+        .about__col.about__col_left
+            svg(viewbox="0 0 600 110" preserveAspectRatio="none").about__triangle
+                polygon(points="0,0 0,110 600, 110")
+            .about__content
+                .section-title(style="background-image: url('assets/img/bg_title.png'); background-size: 80px 60px; background-repeat: no-repeat;")
+                    | ОБО МНЕ
+                img(src="assets/img/bg_title.png" alt="me").section-title__img
+                .about
+                    .about__pic
+                        img(src="assets/img/user_origin.jpg" alt="me")
+                    .text-title КТО Я
+                    .block-text
+                        p
+                        | Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений.
+                        | Мне нравится делать интересные и современные проекты.
+                        p.
+                            Этот сайт я сделал в рамках обучения в Школе онлайн образования Loftschool. Чуть позже я освежу в нём свой контент.
+                            А пока посмотрите, как тут всё классно и красиво!
+                        p I want to be like a superman in Programming World
+
+        .about__col.about__col_right
+            svg(viewbox="0 0 600 110" preserveAspectRatio="none").about__triangle
+                polygon(points="0,110 600,110 600,0")
+
+            .skills
+                .text-title
+                    span.text-title__line ЧЕМ Я МОГУ БЫТЬ
+                    span.text-title__line ВАМ ПОЛЕЗЕН
+                .skills__text
+                    p
+                    | Я являюсь веб-разработчиком. В основном моя работа касается серверной разработки.
+                    | Но я также могу быть полезен в задачах Frontend разработки.
+                    | Мне интересны веб-сервисы и веб-приложения в целом, с технологической точки зрения.
+                ul.skills-group
+                    each skill in skills
+                        li.skills-group__item
+                            .skills-group__title #{skill.type}
+                            ul.skills-list
+                                li.skills-list__item
+                                    each skl in skill.items
+                                        .skill
+                                            svg.skill__circle
+                                                circle(cx="55" cy="55" r="40").skills__circle-under
+                                                circle(cx="55" cy="55" r="40").skills__circle-above
+                                            .skill__title #{skl.title}
+    section.section.map
+        img(src="assets/img/map.jpg" alt="map").section__map
+        .contacts
+            .contacts__title.text-title КОНТАКТЫ
+            ul.contacts__list
+                li.contacts__item
+                    a(href=`skype: ${contacts.skype}`).contacts__link
+                        svg.contacts__icon
+                            use(xlink:href=`assets/img/sprite.svg#skype`)
+                        .contacts__text #{contacts.skype}
+                li.contacts__item
+                    a(href=`email: ${contacts.envelope}`).contacts__link
+                        svg.contacts__icon
+                            use(xlink:href=`assets/img/sprite.svg#envelope`)
+                        .contacts__text #{contacts.email}
+                li.contacts__item
+                    a(href=`${contacts.phone}`).contacts__link
+                        svg.contacts__icon
+                            use(xlink:href=`assets/img/sprite.svg#phone`)
+                        .contacts__text #{contacts.phone}
+                li.contacts__item
+                    span.contacts__text
+                        svg.contacts__icon
+                            use(xlink:href=`assets/img/sprite.svg#map_marker`)
+                        .contacts__text #{contacts.address}
+    #map
+    include ./../common/footer

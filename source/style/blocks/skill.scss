@@ -1,0 +1,62 @@
+// -------------- skils --------------
+
+.skills {
+  @extend %clearfix;
+  padding: 0 6.75%;
+}
+
+.skill__circle {
+  width: 110px;
+  height: 110px;
+  display: block;
+  fill: transparent;
+  stroke-width: 20;
+  float: left;
+}
+
+.skills__circle-under {
+  stroke: #dfdcd5;
+  stroke-width: 15px;
+  fill: transparent;
+}
+
+.skills__circle-above {
+  stroke: $blue;
+}
+.skills-list__item {
+  display: block;
+  @extend %clearfix;
+}
+.skills-group__title {
+  font-size: 22px;
+  padding-bottom: 18px;
+}
+.skills__text {
+  padding-bottom: $text-bottom;
+}
+
+.skill {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  &__title {
+    position: absolute;
+    // margin-top: 53px;
+    // margin-left: 8%;
+    word-wrap: break-word;
+    // transform: translate(-50%, -50%);
+    // top: 50%;
+    // left: 50%;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 1em;
+    margin: auto;
+    right: 0;
+    text-align: center;
+  }
+}
+
+// -------------- #skils --------------

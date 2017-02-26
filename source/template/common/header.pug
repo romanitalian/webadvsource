@@ -1,0 +1,41 @@
+doctype html
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+html(lang='ru')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+        meta(name='viewport', content='width=device-width')
+        link(href='assets/css/main.css', rel='stylesheet')
+
+        block title
+            title #{ttl} | main
+    body
+        <!--[if lt IE 8]>
+        <p class="chromeframe">Похоже, что ты используешь устаревший браузер, друг. Пожалуйста, <a href="http://browsehappy.com/">скачай новый браузер абсолютно бесплатно</a> или <a href="http://www.google.com/chromeframe/?redirect=true">активируй Google Chrome Frame</a></p>
+        <![endif]-->
+        .wrapper
+            section.section.hero
+                .hero__bg
+                    img(src="assets/img/bg_1800.jpg" alt="mounting background").hero__bg-img
+
+                .hero__container
+                    img(src="assets/img/bg_title.png" alt="bg_title").hero-title-pic
+
+                .user
+                    .user__pic-container
+                        .user__pic-wrapper
+                            img(src="assets/img/user.jpg" alt="").user__pic-img
+                        .user__name Roman
+                        .user__desc Личный сайт веб разработчика
+                ul.socials.socials__header
+                    each icon in icons
+                        li.socials__item
+                            a(href=icon.href, title=icon.title).socials__link
+                                svg.socials__icon
+                                    use(xlink:href=`assets/img/sprite.svg#${icon.id}`)
+                button(type="button").hamburger.hamburger--emphatic
+                    span.hamburger-box
+                        span.hamburger-inner

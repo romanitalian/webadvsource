@@ -1,0 +1,32 @@
+// -------------- sections --------------
+.section-title {
+  line-height: 100%;
+  font-size: 63px;
+  color: #373e42;
+  text-align: center;
+  //padding: 0 80px;
+  padding-bottom: 58px;
+  //display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include bernier;
+  position: relative;
+  margin: 0 auto;
+}
+.section-title__img {
+  //@include centered('left');
+  //
+  //position: absolute;
+  //left: 50%;
+  //-webkit-transform: translate(-50%, -50%);
+  //-ms-transform: translate(-50%, -50%);
+  //transform: translate(-50%, -50%);
+  //width: 300px;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 300px;
+}
+// -------------- #sections --------------

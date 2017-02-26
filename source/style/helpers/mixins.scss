@@ -1,0 +1,42 @@
+@mixin centered($axis: 'both') {
+  position: absolute;
+
+  @if ($axis == 'both') {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @if ($axis == 'left') {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @if $axis == 'x' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @if $axis == 'y' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+%clearfix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+
+@mixin tablets() {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}

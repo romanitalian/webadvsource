@@ -1,0 +1,32 @@
+// -------------- text --------------
+.text-title {
+  font-size: 34px;
+  color: #373e42;
+  text-align: center;
+  //padding: 0 80px;
+  //display: inline-block;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  @include bernier;
+  //position: relative;
+
+  margin: 0 auto;
+  padding-bottom: $text-bottom;
+  line-height:100%;
+
+  &__line {
+    @extend %clearfix;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    border-bottom: 3px solid #566359;
+    width: 90px;
+    margin: 0 auto;
+    padding: 5px;
+  }
+}
+// -------------- #text --------------

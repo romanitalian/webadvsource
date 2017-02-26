@@ -1,0 +1,26 @@
+$white: #efeee9;
+$white: #F3F0E9;
+//$beige: #eeebdf;
+$beige: #F4F5F0;
+$green: #10c1a8;
+$text-bottom: 35px;
+$block-bottom: 6.75%;
+$icon-color-hover: #004DCC;
+
+$footer-height: 170px;
+$footer-copyright-height: 35px;
+$footer-color: #3c3e47;
+$footer-line-color: #2C57A5;
+$blue: #1056D2;
+$footer-social-color: #9e9fa3;
+$footer-social-color-footer: #9C9DA1;
+$footer-social-color-hover: #014BD2;
+$footer-border-color: #677084;
+
+$contacts-color: #797981;
+
+@import "helpers/mixins";
+@import "layout/setups";
+@import "layout/fonts";
+@import "hamburgers/index";
+@import "blocks/*.scss";
